@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#container{
+    display: flex;
+    background-color: white;
+    width: 460px;
+    height: 460px;
+    border: 25px solid lightblue;
+}
+.row{
+    display: flex;
+    flex: 1 1 auto;
+    background-color: blue;
+    flex-direction: column;
+}
+
+.col{
+    flex: 1 1 auto;
+}
+
+.black{
+    background-color: black;
+}
