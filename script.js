@@ -2,6 +2,8 @@ let dimension= 16;
 function drawRgb(){
     const container = document.querySelector("#container");
     container.replaceChildren();
+    container.classList.add("rainbowBorder");
+    container.classList.replace("greyBorder","rainbowBorder");
     for(let j=0;j<dimension;j++){
         const row = document.createElement('div');
         row.classList.add("row");
@@ -18,6 +20,7 @@ function drawRgb(){
 function draw(){
     const container = document.querySelector("#container");
     container.replaceChildren();
+    container.classList.replace("rainbowBorder","greyBorder");
     for(let j=0;j<dimension;j++){
         const row = document.createElement('div');
         row.classList.add("row");
