@@ -51,7 +51,7 @@ function blackToWhite(column){
     column.style.backgroundColor = "rgb(0,0,0)";
 }
 function getDimensionRgb(){
-    dimension = parseInt(prompt("Give me the dimensions:"),10);
+    //dimension = parseInt(prompt("Give me the dimensions:"),10);
     if(isNaN(dimension) || dimension > 100){
         alert("You didnt give a number or it was greater than 100(default 16)");
         dimension=16;
@@ -61,7 +61,7 @@ function getDimensionRgb(){
     }
 }
 function getDimensionBlack(){
-    dimension = parseInt(prompt("Give me the dimensions:"),10);
+    //dimension = parseInt(prompt("Give me the dimensions:"),10);
     if(isNaN(dimension) || dimension > 100){
         alert("You didnt give a number or it was greater than 100(default 16)");
         dimension=16;
@@ -77,4 +77,12 @@ function getRandomRgb(){
     let green= Math.floor(Math.random() * 256);
     let blue= Math.floor(Math.random() * 256);
     return  "rgb(" + red + "," + green + "," + blue + ")";
+}
+
+const sliding = document.querySelector(`input[type="range"]`);
+console.log(sliding);
+sliding.addEventListener("mouseup", () => {dimension = sliding.value;});
+function slider(value){
+    const p = document.getElementById("rangeValue");
+    p.innerText = value + "x" + value;
 }
